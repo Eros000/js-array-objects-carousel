@@ -1,4 +1,4 @@
-const images = [
+const slides = [
     {
         image: 'img/01.webp',
         title: 'Marvel\'s Spiderman Miles Morale',
@@ -21,3 +21,29 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+// for dell'array
+// crei la slide con le chiavi dell'oggetto
+
+const imagesContainer = document.querySelector('images-container')
+
+slides.forEach(slide => {
+
+})
+
+for(let i =0 ; i < images.length; i++){
+    const slide = images[i]
+
+    imagesContainer.innerHTML += `
+        
+    <div class="img-container">
+
+        <div>${slide.title}</div> 
+        <img src="${slide.image}">
+
+
+    </div>
+    `
+}
+
+imagesContainer.querySelector('.img-container:nth-child(1)').classList.add('active')
